@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Contact Details</h1>
+<div class="card text-bg-light mb-3" style="max-width: 40rem;">
+    <div class="card-header"><strong>{{customer_record.first_name}} {{customer_record.last_name}}</strong></div>
+    <div class="card-body">
+      <h5 class="card-title">Email:</h5><p class="card-text">{{customer_record.email}}</p>
+      <h5 class="card-title">Phone:</h5><p class="card-text">{{customer_record.phone}}</p>
+      <h5 class="card-title">Address:</h5><p class="card-text">{{customer_record.address}}</p>
+      <h5 class="card-title">Zipcode:</h5><p class="card-text">{{customer_record.zipcode}}</p>
+      <h5 class="card-title">Created On:</h5><p class="card-text">{{customer_record.created_at}}</p>
+      <h5 class="card-title">ID:</h5><p class="card-text">{{customer_record.id}}</p>
+      
+      
+    </div>
+  </div>
+  <a href="{% url 'home'%}" class="btn btn-secondary">Go to Home</a>
+
+{% endblock %}
+

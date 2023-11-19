@@ -9,14 +9,14 @@
       <h5 class="card-title">Address:</h5><p class="card-text">{{customer_record.address}}</p>
       <h5 class="card-title">Zipcode:</h5><p class="card-text">{{customer_record.zipcode}}</p>
       <h5 class="card-title">Created On:</h5><p class="card-text">{{customer_record.created_at}}</p>
-      <h5 class="card-title">ID:</h5><p class="card-text">{{customer_record.id}}</p>
+      <!-- <h5 class="card-title">ID:</h5><p class="card-text">{{customer_record.id}}</p> -->
       
       
     </div>
   </div>
   <a href="{% url 'home'%}" class="btn btn-secondary">Go to Home</a>
   <a href="{%url 'delete' customer_record.id %}" class="btn btn-danger">Delete</a>
- 
+  <a href="{% url 'update_record' customer_record.id %}" class="btn btn-secondary">Update Record</a>
 
 {% endblock %}
 

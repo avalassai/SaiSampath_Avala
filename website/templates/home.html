@@ -17,7 +17,7 @@
       <th scope="col">Address</th>
       <th scope="col">Zipcode</th>
       <th scope="col">Created Date</th>
-      <th scope="col">ID</th>
+      <th scope="col"></th>
     </tr>
   </thead>
   <tbody>
@@ -31,7 +31,7 @@
       <td>{{record.address}}</td>
       <td>{{record.zipcode}}</td>
       <td>{{record.created_at}}</td>
-      <td><a href="{% url 'record' record.id %}">{{record.id}}</a></td>
+      <td><a href="{% url 'record' record.id %}">Edit</a></td>
   </tr>
   {% endfor %}
 {% endif %}

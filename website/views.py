@@ -23,17 +23,17 @@ def home(request):
 
     else:
         return render(request,'home.html',{'records':records})
-# Create your views here.
 
-def login_user(request):
+
+def UserLogin(request):
     pass
-def logout_user(request):
+def UserLogout(request):
     logout(request)
-    messages.success(request,"You have Been Logged Out..")
+    messages.success(request,"You have Been Logged Out")
     return redirect('home')
 
 
-def customer_record(request , pk):
+def CustomerRecord(request , pk):
     if request.user.is_authenticated:
         customer_record = Record.objects.get(id=pk)
         return render(request, 'record.html',{'customer_record':customer_record})
@@ -42,7 +42,7 @@ def customer_record(request , pk):
         messages.success(request, "You must be logged in to view the Contacts Page")
         return redirect('home')
 
-def delete_page(request ,pk):
+def DeletePage(request ,pk):
     if request.user.is_authenticated:
         customer_record = Record.objects.get(id=pk)
         return render(request, 'delete.html',{'customer_record':customer_record})
@@ -52,7 +52,7 @@ def delete_page(request ,pk):
 
 
 
-def delete_record(request,pk):
+def DeleteRecord(request,pk):
     if request.user.is_authenticated:
         delete_rec = Record.objects.get(id=pk)
         delete_rec.delete()
@@ -62,7 +62,7 @@ def delete_record(request,pk):
         messages.success(request, "You must be logged in to delete the record")
         return redirect('home')
         
-def add_record(request):
+def AddRecord(request):
     
     form = AddRecordForm(request.POST or None)
     if request.user.is_authenticated:
@@ -77,7 +77,7 @@ def add_record(request):
         messages.success(request,"You must log in to add a record")
 
 
-def update_record(request,pk):
+def UpdateRecord(request,pk):
     if request.user.is_authenticated:
          cust_record = Record.objects.get(id=pk)
          form = AddRecordForm(request.POST or None , instance = cust_record)

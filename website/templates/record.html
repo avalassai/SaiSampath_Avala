@@ -14,9 +14,10 @@
       
     </div>
   </div>
-  <a href="{% url 'home'%}" class="btn btn-secondary">Go to Home</a>
+  <a href="{% url 'home'%}" class="btn btn-secondary" style="background-color: aqua; color: black;">Home</a>
+  <a href="{% url 'update_record' customer_record.id %}" class="btn btn-secondary" style="background-color: yellow; color: black;">Edit</a>
   <a href="{%url 'delete' customer_record.id %}" class="btn btn-danger">Delete</a>
-  <a href="{% url 'update_record' customer_record.id %}" class="btn btn-secondary">Update Record</a>
+
 
 {% endblock %}
 

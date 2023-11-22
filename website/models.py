@@ -7,7 +7,7 @@ class Record(models.Model):
     first_name = models.CharField(max_length=50 , unique=True)
     last_name = models.CharField(max_length=50)
     email = models.EmailField(max_length=50, unique=True)
-    phone = models.CharField(max_length=12)
+    phone = models.CharField(max_length=12, unique=True)
     address =models.CharField(max_length=200)
     city = models.CharField(max_length=50)
     state =models.CharField(max_length=50)

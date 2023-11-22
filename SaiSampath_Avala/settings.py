@@ -13,6 +13,11 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 from pathlib import Path
 import pymysql
 
+# import zoneinfo
+# zoneinfo.available_timezones()
+
+from django.utils import timezone
+
 pymysql.version_info = (1, 4, 6, 'final', 0)
 pymysql.install_as_MySQLdb()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -113,9 +118,11 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Los_Angeles'
 
 USE_I18N = True
+
+USE_LI0N = True
 
 USE_TZ = True
 

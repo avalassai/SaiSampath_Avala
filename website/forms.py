@@ -5,9 +5,9 @@ from .models import Record
 
 
 class AddRecordForm(forms.ModelForm):
-    first_name = forms.CharField(required=True,widget=forms.widgets.TextInput(attrs={"placeholder":"Enter Name", "class":"form-control"}) , label="")
-    email = forms.CharField(required=True,widget=forms.widgets.TextInput(attrs={"placeholder":"Email", "class":"form-control"}) , label="")
-    notes = forms.CharField(widget=forms.Textarea(attrs={"placeholder":"Notes", "class":"form-control",'rows':8}),label="")
+    first_name = forms.CharField(required=True,widget=forms.widgets.TextInput(attrs={"placeholder":"", "class":"form-control"}) , label="Name")
+    email = forms.CharField(required=True,widget=forms.widgets.TextInput(attrs={"placeholder":"", "class":"form-control"}) , label="Email")
+    notes = forms.CharField(widget=forms.Textarea(attrs={"placeholder":"", "class":"form-control",'rows':8}),label="Notes")
 
 
     class Meta:

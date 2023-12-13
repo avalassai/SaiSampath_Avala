@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1>Confirm Delete</h1>
+<center><h1>Confirm Delete</h1></center>
 <p style="font-size: 30px;">Are you sure you want to delete <strong>{{customer_record.first_name}} {{customer_record.last_name}}</strong> Record?</p>
 <a href="{% url 'delete_record' customer_record.id%}" class="btn btn-danger">Delete</a>
 <a href="{% url 'record' customer_record.id%}" class="btn btn-secondary">Cancel</a>
